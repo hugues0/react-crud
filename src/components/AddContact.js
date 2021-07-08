@@ -14,12 +14,13 @@ class AddContact extends Component {
       }
       console.log(this.state);
       this.props.addContactHandler(this.state)
-      this.setState({name:"",email:""})
+      this.setState({name:"",email:""}) 
+      this.props.history.push("/")
 
   }
   render() {
     return (
-      <div className="ui main">
+      <div className="ui main" style={{ marginTop: "55px" }}>
         <h2>Add contact</h2>
         <form className="ui form" onSubmit={this.add}>
           <div className="field">
